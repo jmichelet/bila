@@ -21,17 +21,19 @@ Il a été testé dans les configurations suivantes :
 #### Exemple d'installation sur une machine Linux Debian 9 via virtualenv:
 
 + Installation de python 3.5 et de virtualenv. En mode 'root':
-> apt install python3.5 virtualenv
-
+>$ apt install python3.5 virtualenv
+>
 + Création de l'environnement virtuel et activation:
-> virtualenv -p /usr/bin/python3.5 venv_bila
-> source ./venv_bila/bin/activate
-
+>$ virtualenv -p /usr/bin/python3.5 venv_bila
+>$ source ./venv_bila/bin/activate
+>
 + Installation des bibliothèques nécessaires et de leur dépendances:
-> pip install pathlib2 astropy wxpython
-
+>$ pip install pathlib2 astropy wxpython
+>
 + Lancement du programme:
-> cd répertoire_où_est_installé_bila
-> python ./bila.py
+>$ cd répertoire_où_est_installé_bila
+>$ python ./bila.py
+>
 
-(1) *Un bogue de wxpython sous Windows 10 empêche l'apparition de ces couleurs. cf* http://github.com/wxWidgets/Phoenix/issues/808====
+
+(1) *Un bogue de wxpython sous Windows 10 empêche l'apparition de ces couleurs. cf* http://github.com/wxWidgets/Phoenix/issues/808
