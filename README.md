@@ -13,7 +13,7 @@ L'utilisateur doit rentrer l'heure d'observation, les coordonnées équatoriales
 Les résultats sont affichés dans la fenêtre de droite. Les lignes colorées en jaune correspondent à une étoile dont le type spectral est présent dans la base Pickles, celles colorées en vert ont un spectre dans la base Miles*(1)*.
 
 #### Installation
-Ce code requiert Python 3.5 et au-delà, **Python 2.x n'est pas supporté**. Il utilise intensivement les bibliothèques astropy (calculs astronomiques) et wxpython (interface graphique). Comme d'habitude, il est très fortement conseillé d'utiliser un environment virtuel (virtualenv ou Anaconda, par exemple) pour installer une version de Python et les bibliothèques associées de façon cohérente.
+Ce code requiert Python 3.5 et au-delà, **Python 2.x n'est pas supporté**. Il utilise intensivement les bibliothèques astropy (calculs astronomiques) et wxpython (interface graphique). Comme d'habitude, il est très fortement conseillé d'utiliser un environment virtuel (via virtualenv ou Anaconda, par exemple) pour installer une version de Python et les bibliothèques associées de façon cohérente.
 Il a été testé dans les configurations suivantes :
 
 + Linux Debian 9 + virtualenv + Python 3.5
@@ -46,6 +46,7 @@ Lancement du programme:
 
 
 --------------------------------------------- English version --------------------------------------------------------
+
 **Bila** is a software for astronomical spectroscopy observers, which helps them in selecting a A or B spectral type reference star that is close to a target star.
 
 #### Credits
