@@ -122,7 +122,6 @@ class FenetrePrincipale(wx.Frame):
         self.titre_temps = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Date et heure')
 
         # 3-1 Date
-        self.etiq_date = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Date')
         self.etiq_annee = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Année')
         self.edit_annee = wx.TextCtrl(self.panneau_saisie, wx.ID_ANY, self.annee)
         self.etiq_mois = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Mois')
@@ -140,7 +139,7 @@ class FenetrePrincipale(wx.Frame):
         # 4 Critères de sélection
         self.titre_critere = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Critères de sélection')
 
-        self.etiq_separation = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Séparation max')
+        self.etiq_separation = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Séparation max (degrés)')
         self.cb_separation = wx.ComboBox(self.panneau_saisie, choices=separations, style=wx.CB_DROPDOWN)
         self.cb_separation.SetSelection(separations.index(self.separation_max))
 
@@ -148,12 +147,12 @@ class FenetrePrincipale(wx.Frame):
         self.cb_ecart_bv = wx.ComboBox(self.panneau_saisie, choices=ecarts_bv, style=wx.CB_DROPDOWN)
         self.cb_ecart_bv.SetSelection(ecarts_bv.index(self.ecart_bv_max))
 
-        self.etiq_hauteur_min = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Hauteur min')
+        self.etiq_hauteur_min = wx.StaticText(self.panneau_saisie, wx.ID_ANY, 'Hauteur min (degrés)')
         self.edit_hauteur_min = wx.TextCtrl(self.panneau_saisie, wx.ID_ANY, self.hauteur_min)
 
         # 5 Boutons d'action
-        self.bouton_calcul = wx.Button(self.panneau_saisie, wx.ID_ANY, 'Calcul')
-        self.bouton_arret = wx.Button(self.panneau_saisie, wx.ID_ANY, 'Arrêt')
+        self.bouton_calcul = wx.Button(self.panneau_saisie, wx.ID_ANY, 'Calculer')
+        self.bouton_arret = wx.Button(self.panneau_saisie, wx.ID_ANY, 'Fermer')
 
         # Panneau des résultats
         self.resultat = wx.TextCtrl(self, wx.ID_ANY, size=(600, 600), style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_DONTWRAP)
@@ -524,6 +523,8 @@ class FenetrePrincipale(wx.Frame):
                 selection.append(etoile)
         # Tri par différence de hauteur :
         selection = sorted(selection, key=lambda item: math.fabs(item['dhauteur'].degree))
+        # Sortie des résultats
+        self.resultat.AppendText('\n\nNum  Nom\tSép.\tMagV\tCoordonnées\tH. Dif haut\tB-V\tDif B-V\tType\tM. Air\tMiles\n')
         ligne = 1
         for etoile in selection:
             if etoile['Sp'] in type_pickles:

@@ -9,7 +9,7 @@ Il reprend une idée originale de F. Teyssier et implémentée dans une feuille 
 Bila diffère un peu d'avec les approches précédentes : ce code écrit en Python fonctionne de façon similaire sous Linux et Windows, ne requiert pas d'utiliser un tableur propriétaire, et d'avoir un ordinateur connecté au réseau Internet. Il fonctionne donc en mode autonome.
 
 #### Utilisation
-L'utilisateur doit rentrer l'heure d'observation, les coordonnées équatoriales de l'étoile visée et les coordonnées géographiques du site d'observation. Pour des étoiles souvent observées, il peut s'aider du menu défilant à droite de "Etoiles cibles". Ce menu reprend le contenu du fichier cibles.csv que l'utilisateur peut enrichier et modifier à son gré. Même chose pour la sélection d'un site d'observation via le fichier obs.csv.
+L'utilisateur doit rentrer l'heure d'observation, les coordonnées équatoriales de l'étoile visée et les coordonnées géographiques du site d'observation. Pour des étoiles souvent observées, il peut s'aider du menu défilant à droite de "Etoiles cibles". Ce menu reprend le contenu du fichier cibles.csv que l'utilisateur peut enrichier et modifier à son gré. Attention, ce fichier ne sert qu'a initialiser le menu, on ne peut en modifier le contenu que par un éditeur de texte (pas de sauvegarde de ce fichier). Même chose pour la sélection d'un site d'observation via le fichier obs.csv.
 Les résultats sont affichés dans la fenêtre de droite. Les lignes colorées en jaune correspondent à une étoile dont le type spectral est présent dans la base Pickles, celles colorées en vert ont un spectre dans la base Miles*(1)*.
 
 #### Installation
@@ -56,7 +56,7 @@ It derives from an original idea from F. Teyssier who implemented it in a spread
 Bila has some differences with the 2 previous implementations, as this Python code works similarly under Linux and Windows, does not request using a proprietary spread-sheet, or having a computer connected to the Internet. It works in an autonomous way.
 
 #### Usage
-The user has to manually enter the observing time, the equatorial coordinates of the target and the geopgraphical coordinates of the observatory. For stars that are commonly studied, it main be convenient to use the dropdown menu located at the right of "Etoiles cibles" label. This menu entries are provided by the cible.csv file that the user can modify and enrich to his liking. Same thing for selecting an observation site, using the obs.csv file.
+The user has to manually enter the observing time, the equatorial coordinates of the target and the geopgraphical coordinates of the observatory. For stars that are commonly studied, it main be convenient to use the dropdown menu located at the right of "Etoiles cibles" label. This menu entries are provided by the cible.csv file that the user can modify and enrich to his liking. Note that this file is only used for initialising the menu content, any change to this file should be done through a text editor. Same thing for selecting an observation site, using the obs.csv file.
 The results are displayed in the right pane. Yellow-coloured lines are for a star which spectral type is included in the Pickles database. Green-coloured lines are stars which spectrum exists in the Miles database (1).
 So far, this software is in French only. As the French astronomical vocabulary is pretty close to the English one, that should not be a major issue.
 
