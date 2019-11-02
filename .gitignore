@@ -1,0 +1,7 @@
+none
+brouillon
+.venv
+**.pyc
+**.fit
+**.fits
+**/.idea
