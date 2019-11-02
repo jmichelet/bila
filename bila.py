@@ -7,6 +7,11 @@ import csv
 import astropy.units as u
 from astropy.coordinates import SkyCoord, EarthLocation, AltAz, Angle
 
+# On enlève les avertissements relatifs à iers dus à la fonction transform_to()
+import warnings
+from astropy.utils.exceptions import AstropyWarning
+warnings.filterwarnings(action='ignore', category=AstropyWarning, module=r'.*astropy.coordinates',)
+
 # Principe de base : pas d'accès à Internet
 from astropy.utils import iers
 iers.conf.auto_download = False
