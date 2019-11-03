@@ -42,6 +42,26 @@ Lancement du programme:
 
 
 
+#### Exemple d'installation sur une machine Linux Debian 9 via miniconda3:
+L'installation de conda est décrite sur cette [page ](https://docs.conda.io/en/latest/miniconda.html) .
+
+Création de l'environnement virtuel et activation
+```
+conda create --name bila python=3.7
+conda activate bila
+```
+
+Installation des bibliothèques nécessaires et de leur dépendances:
+```
+conda install -c anaconda astropy  wxpython
+```
+
+Lancement du programme:
+
+    $ cd <répertoire_où_est_installé_bila>
+    $ python ./bila.py
+
+
 (1) *Un bogue de wxpython sous Windows 10 empêche l'apparition de ces couleurs. cf* http://github.com/wxWidgets/Phoenix/issues/808
 
 
@@ -88,6 +108,27 @@ Program run:
     $ cd <folder_where_bila_is_deployed>
     $ python ./bila.py
 	
+#### Example of installation on a Linux Debian 9 machine, through miniconda3.
+
+conda should be installed as described in this [page ](https://docs.conda.io/en/latest/miniconda.html) .
+
+Création of the virtual environment and activation:
+
+```
+conda create --name bila python=3.7
+conda activate bila
+```
+
+Installation of the libraries and their dependencies:
+
+```
+conda install -c anaconda astropy wxpython
+```
+
+Program run:
+
+    $ cd <répertoire_où_est_installé_bila>
+    $ python ./bila.py
 
 
-(1) *Actually, there is a bug under Windows 10 that prevents colours to be displayed. cf* http://github.com/wxWidgets/Phoenix/issues/808
+(1) *Actually, there is a bug under Windows 10 that prevents colours from being displayed. cf* http://github.com/wxWidgets/Phoenix/issues/808
