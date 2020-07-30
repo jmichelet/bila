@@ -23,7 +23,7 @@ fichier_csv_cibles = 'cibles.csv'
 separations = ['5', '10', '20', '30']
 ecarts_bv = ['0.05', '0.1', '0.2', '0.5']
 type_pickles = ['A0I', 'A0III', 'A0IV', 'A0V', 'A2I', 'A2V', 'A3III', 'A3V', 'A5III', 'A5V', 'A7III', 'A7V',
-                'B0I', 'B0V', 'B1I', 'B1V', 'B2II', 'B2IV', 'B3I', 'B3III', 'B3V', 'B5I', 'B5III', 'B5V', 'B6IV', 'B8I', 'B8V', 'B9III', 'B9V']
+                'B0I', 'B0V', 'B1I', 'B1V', 'B2II', 'B2IV', 'B3I', 'B3III', 'B3V', 'B5I', 'B5III', 'B6IV', 'B8I', 'B8V', 'B9III', 'B9V']
 
 couleur_resultat_defaut = wx.LIGHT_GREY
 couleur_resultat_pickles = wx.YELLOW
@@ -443,7 +443,7 @@ class FenetrePrincipale(wx.Frame):
 
     def generation_etoile(self, etoile, cible, altaz, criteres):
         try:
-            if float(etoile['EB-V']) < 0: 
+            if float(etoile['EB-V']) < 0:
                 etoile['EB-V'] = '0'
             if float(etoile['EB-V']) > criteres['ecart_bv_max']:
                 return None
